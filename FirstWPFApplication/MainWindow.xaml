@@ -1,0 +1,21 @@
+﻿<Window x:Name="changeMe" x:Class="FirstWPFApplication.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FirstWPFApplication"
+        mc:Ignorable="d"
+        Title="First WPF Application (Participation)" Height="450" Width="800" Background="CornflowerBlue">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush/>
+        </Grid.Background>
+        <Label x:Name="lblName" Content="Input your name" HorizontalAlignment="Left" Margin="50,55,0,0" VerticalAlignment="Top" Height="80" Width="340" FontSize="36" Background="#00000000" FontFamily="Papyrus"/>
+        <Label x:Name="lblBirthday" Content="Input your birthday&#xD;&#xA;" HorizontalAlignment="Left" Margin="457,55,0,0" VerticalAlignment="Top" Height="80" Width="306" FontSize="36" FontFamily="Papyrus"/>
+        <TextBox x:Name="tbxName" HorizontalAlignment="Left" Margin="61,147,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="254" Height="47"/>
+        <TextBox x:Name="tbxBirthday" HorizontalAlignment="Left" Margin="483,147,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="254" Height="47"/>
+        <Button x:Name="btnCalculate" Content="Click me to calculate your age!" HorizontalAlignment="Center" Margin="0,252,0,0" VerticalAlignment="Top" Height="70" Width="288" Click="btnCalculate_Click" MouseEnter="btnCalculate_MouseEnter" MouseLeave="btnCalculate_MouseLeave"/>
+        <Label x:Name="lblNyeh" Content="Label" HorizontalAlignment="Left" Margin="552,368,0,0" VerticalAlignment="Top" Width="197" FontFamily="Papyrus" FontSize="14"/>
+
+    </Grid>
+</Window>
