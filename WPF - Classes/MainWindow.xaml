@@ -1,0 +1,20 @@
+﻿<Window x:Class="WPF___Classes.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF___Classes"
+        mc:Ignorable="d"
+        Title="WPF1" Height="450" Width="800">
+    <Grid Background="#FF6256AE">
+        <Label x:Name="lblName" Content="Name" HorizontalAlignment="Left" Margin="55,91,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="tbxName" HorizontalAlignment="Left" Margin="127,95,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="btnSubmit" Content="Submit" HorizontalAlignment="Left" Margin="127,329,0,0" VerticalAlignment="Top" Height="51" Width="123" Click="btnSubmit_Click"/>
+        <ListBox x:Name="lbxTheListBox" Margin="414,25,24,32"/>
+        <Label x:Name="lblAddress" Content="Address" HorizontalAlignment="Left" Margin="55,128,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="tbxAddress" HorizontalAlignment="Left" Margin="127,132,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="lblZipcode" Content="Zipcode" HorizontalAlignment="Left" Margin="55,171,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="tbxZipcode" HorizontalAlignment="Left" Margin="127,175,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+
+    </Grid>
+</Window>

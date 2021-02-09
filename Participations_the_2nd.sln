@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30907.101
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FirstWPFApplication", "FirstWPFApplication\FirstWPFApplication.csproj", "{6C42A027-9462-404A-8BA5-275661A2423B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FirstWPFApplication", "FirstWPFApplication\FirstWPFApplication.csproj", "{6C42A027-9462-404A-8BA5-275661A2423B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPF - Classes", "WPF - Classes\WPF - Classes.csproj", "{21EBD447-B653-4236-9167-BB34A36A879E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{6C42A027-9462-404A-8BA5-275661A2423B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6C42A027-9462-404A-8BA5-275661A2423B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6C42A027-9462-404A-8BA5-275661A2423B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{21EBD447-B653-4236-9167-BB34A36A879E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21EBD447-B653-4236-9167-BB34A36A879E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21EBD447-B653-4236-9167-BB34A36A879E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21EBD447-B653-4236-9167-BB34A36A879E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
