@@ -27,7 +27,14 @@ namespace WPF___Classes
 
         private void btnSubmit_Click(object sender, RoutedEventArgs e)
         {
+            EntryForm myEntryForm = new EntryForm()
+            {
+                Name = tbxName.Text,
+                Address = tbxAddress.Text,
+                ZipCode =  Convert.ToInt32(tbxZipcode.Text),
+            };
 
+            lbxTheListBox.Items.Add(myEntryForm);
         }
     }
 }

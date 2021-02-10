@@ -4,7 +4,7 @@ using System.Text;
 
 namespace WPF___Classes
 {
-    class EntryForm
+    public class EntryForm
     {
         public string Name { get; set; }
         public string Address { get; set; }
@@ -36,7 +36,7 @@ namespace WPF___Classes
 
         public override string ToString()
         {
-            return base.ToString();
+            return (Name + ", " + Address + " " + ZipCode);
         }
     }
 }

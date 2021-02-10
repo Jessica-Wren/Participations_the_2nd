@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.30907.101
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FirstWPFApplication", "FirstWPFApplication\FirstWPFApplication.csproj", "{6C42A027-9462-404A-8BA5-275661A2423B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPF - Classes", "WPF - Classes\WPF - Classes.csproj", "{21EBD447-B653-4236-9167-BB34A36A879E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WPF1", "WPF - Classes\WPF1.csproj", "{21EBD447-B653-4236-9167-BB34A36A879E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
