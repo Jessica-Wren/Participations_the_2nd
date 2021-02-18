@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace WPF___Classes
+namespace Classes_3
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -24,18 +24,5 @@ namespace WPF___Classes
         {
             InitializeComponent();
         }
-
-        private void btnTheButton_Click(object sender, RoutedEventArgs e)
-        {
-            EntryForm myEntryForm = new EntryForm
-            {
-                Name = tbxName.Text,
-                Address = tbxAddress.Text,
-                ZipCode = Convert.ToInt32(tbxZipcode.Text),
-
-            };
-            lbxTheListBox.Items.Add(myEntryForm);
-        }
     }
 }
-

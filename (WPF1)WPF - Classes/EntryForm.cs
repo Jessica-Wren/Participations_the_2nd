@@ -4,25 +4,25 @@ using System.Text;
 
 namespace WPF___Classes
 {
-    class EntryForm
+    public class EntryForm
     {
         public string Name { get; set; }
         public string Address { get; set; }
         public int ZipCode { get; set; }
 
+
         /// <summary>
-        /// DEFAULT CTOR
+        /// Default ctor
         /// </summary>
         public EntryForm()
         {
             Name = string.Empty;
             Address = string.Empty;
             ZipCode = 0;
-
         }
-
+        
         /// <summary>
-        /// OVERLOADED CTOR
+        /// Overloaded ctor
         /// </summary>
         /// <param name="name"></param>
         /// <param name="address"></param>
@@ -34,15 +34,9 @@ namespace WPF___Classes
             ZipCode = zipCode;
         }
 
-        /*public override string ToString()
-        {
-            return (Name + ", " + Address + ", " + ZipCode);
-        }*/
-
         public override string ToString()
         {
-            return (Name + " " + Address + " " + ZipCode);
+            return (Name + ", " + Address + " " + ZipCode);
         }
-
     }
 }

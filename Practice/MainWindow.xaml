@@ -1,0 +1,17 @@
+﻿<Window x:Class="Practice.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Practice"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid x:Name="grdChangeMe" Background="PapayaWhip">
+        <Label x:Name="lblName" Content="Name" HorizontalAlignment="Left" Margin="126,112,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblBDay" Content="Birthday" HorizontalAlignment="Left" Margin="602,88,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="tbxName" HorizontalAlignment="Left" Margin="145,166,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="btnButton" Content="Button" HorizontalAlignment="Left" Margin="389,339,0,0" VerticalAlignment="Top" Height="61" Width="119" Click="Button_Click" MouseEnter="btnButton_MouseEnter" MouseLeave="btnButton_MouseLeave"/>
+        <TextBox x:Name="tbxBDay" HorizontalAlignment="Left" Margin="629,158,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+
+    </Grid>
+</Window>

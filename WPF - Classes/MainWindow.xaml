@@ -5,27 +5,23 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPF___Classes"
         mc:Ignorable="d"
-        Title="WPF1" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800">
     <Grid>
         <Grid.Background>
-            <ImageBrush ImageSource="https://nintendowire.com/wp-content/uploads/2020/08/Banner-Pokemon-Slowpoke.jpeg"/>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FF0046FF" Offset="0.713"/>
+                <GradientStop Color="#FFE826BC" Offset="1"/>
+                <GradientStop Color="#FF00FDF2" Offset="0.261"/>
+            </LinearGradientBrush>
         </Grid.Background>
-        <Label x:Name="lblName" Content="Name" HorizontalAlignment="Left" Margin="55,91,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="tbxName" HorizontalAlignment="Left" Margin="127,95,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Button x:Name="btnSubmit" Content="Submit" HorizontalAlignment="Left" Margin="127,329,0,0" VerticalAlignment="Top" Height="51" Width="123" Click="btnSubmit_Click" Background="#FFF5CAED"/>
-        <ListBox x:Name="lbxTheListBox" Margin="580,34,10,33">
-            <ListBox.Background>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="#FF08717C" Offset="1"/>
-                    <GradientStop Color="#FF69E3F0" Offset="0"/>
-                    <GradientStop Color="#FF3571F1" Offset="0.513"/>
-                </LinearGradientBrush>
-            </ListBox.Background>
-        </ListBox>
-        <Label x:Name="lblAddress" Content="Address" HorizontalAlignment="Left" Margin="55,128,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="tbxAddress" HorizontalAlignment="Left" Margin="127,132,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Label x:Name="lblZipcode" Content="Zipcode" HorizontalAlignment="Left" Margin="55,171,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="tbxZipcode" HorizontalAlignment="Left" Margin="127,175,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="tbxName" HorizontalAlignment="Left" Margin="101,55,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Name" HorizontalAlignment="Left" Margin="48,51,0,0" VerticalAlignment="Top"/>
+        <Label Content="Address" HorizontalAlignment="Left" Margin="48,108,0,0" VerticalAlignment="Top"/>
+        <Label Content="Zipcode" HorizontalAlignment="Left" Margin="48,165,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="tbxAddress" HorizontalAlignment="Left" Margin="114,112,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="tbxZipcode" HorizontalAlignment="Left" Margin="114,169,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <ListBox x:Name="lbxTheListBox" Margin="386,21,45,201"/>
+        <Button x:Name="btnTheButton" Content="Button" HorizontalAlignment="Left" Margin="88,238,0,0" VerticalAlignment="Top" Height="64" Width="124" Click="btnTheButton_Click"/>
 
     </Grid>
 </Window>
