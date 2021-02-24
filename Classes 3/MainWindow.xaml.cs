@@ -24,5 +24,38 @@ namespace Classes_3
         {
             InitializeComponent();
         }
+
+        private void btnSubmitInfo_Click(object sender, RoutedEventArgs e)
+        {
+
+            int streetnum;
+            int.TryParse(tbxStreetNumber.Text, out streetnum);
+
+            int zipCode;
+            int.TryParse(tbxZipcode.Text, out zipCode);
+
+
+                Student myStudent = new Student
+            {
+                FirstName = tbxFirstName.Text,
+                LastName = tbxLastName.Text,
+                Major = tbxMajor.Text,
+                GPA = Convert.ToDouble(tbxGPA.Text),
+            };
+
+            myStudent.SetAddress(streetnum, tbxStreetName.Text, tbxState.Text, tbxCity.Text, zipCode);
+            lbxTheListBox.Items.Add(myStudent);
+
+
+            tbxCity.Clear();
+            tbxFirstName.Clear();
+            tbxGPA.Clear();
+            tbxLastName.Clear();
+            tbxMajor.Clear();
+            tbxState.Clear();
+            tbxStreetName.Clear();
+            tbxStreetNumber.Clear();
+            tbxZipcode.Clear();
+        }
     }
 }
