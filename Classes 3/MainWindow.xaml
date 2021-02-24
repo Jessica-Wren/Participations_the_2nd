@@ -7,9 +7,9 @@
         mc:Ignorable="d"
         Title="Classes 3" Height="450" Width="800">
     <Grid>
-        <Grid RenderTransformOrigin="0.504,0.496" Margin="3,0,-3,0">
+        <Grid RenderTransformOrigin="0.504,0.496" Margin="0,-23,0,23">
             <Grid.Background>
-                <ImageBrush ImageSource="544bc4a5-8c5c-4d8b-90dd-f09a2ef5453e"/>
+                <ImageBrush/>
             </Grid.Background>
             <Label x:Name="lblFirstName" Content="First Name&#xA;" HorizontalAlignment="Left" Margin="25,80,0,0" VerticalAlignment="Top" FontFamily="Monotype Corsiva" FontSize="18" Height="24"/>
             <Label x:Name="lblStreetNumber" Content="Street Number" HorizontalAlignment="Left" Margin="32,0,0,0" VerticalAlignment="Center" FontFamily="Monotype Corsiva" FontSize="18"/>
@@ -33,7 +33,7 @@
             <TextBox x:Name="tbxState" HorizontalAlignment="Left" Margin="168,269,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
             <TextBox x:Name="tbxCity" HorizontalAlignment="Left" Margin="168,302,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.493,0.536"/>
             <TextBox x:Name="tbxZipcode" HorizontalAlignment="Left" Margin="168,333,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-            <ListBox x:Name="lbxTheListBox" Margin="388,83,44,83"/>
+            <ListBox x:Name="lbxTheListBox" Margin="388,83,44,83" SelectionChanged="lbxTheListBox_SelectionChanged"/>
 
 
         </Grid>

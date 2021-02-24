@@ -57,5 +57,26 @@ namespace Classes_3
             tbxStreetNumber.Clear();
             tbxZipcode.Clear();
         }
+
+        
+        private void lbxTheListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            
+            Student selectedStudent = (Student)lbxTheListBox.SelectedItem;
+
+            
+
+            MyNewForm myNewFormV = new MyNewForm();
+
+            myNewFormV.Show();
+
+            //myNewFormV.ShowStudent(selectedStudent);
+
+            
+
+            //myNewFormV.GetYouOver = selectedStudent;
+        }
+
+
     }
 }
