@@ -6,12 +6,15 @@
         xmlns:local="clr-namespace:Practice"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid x:Name="grdChangeMe" Background="PapayaWhip">
-        <Label x:Name="lblName" Content="Name" HorizontalAlignment="Left" Margin="126,112,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="lblBDay" Content="Birthday" HorizontalAlignment="Left" Margin="602,88,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="tbxName" HorizontalAlignment="Left" Margin="145,166,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Button x:Name="btnButton" Content="Button" HorizontalAlignment="Left" Margin="389,339,0,0" VerticalAlignment="Top" Height="61" Width="119" Click="Button_Click" MouseEnter="btnButton_MouseEnter" MouseLeave="btnButton_MouseLeave"/>
-        <TextBox x:Name="tbxBDay" HorizontalAlignment="Left" Margin="629,158,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+    <Grid>
+        <ListBox x:Name="lbxListBox" Margin="459,23,0,0"/>
+        <Label Content="Name" HorizontalAlignment="Left" Margin="126,87,0,0" VerticalAlignment="Top"/>
+        <Label Content="Address" HorizontalAlignment="Left" Margin="187,176,0,0" VerticalAlignment="Top"/>
+        <Label Content="Zip" HorizontalAlignment="Left" Margin="126,273,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="tbxName" HorizontalAlignment="Left" Margin="274,100,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="tbxAddress" HorizontalAlignment="Left" Margin="311,176,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="tbxZip" HorizontalAlignment="Left" Margin="251,277,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="btnButton" Content="GO" HorizontalAlignment="Left" Margin="213,344,0,0" VerticalAlignment="Top" Height="58" Width="135" Click="btnButton_Click"/>
 
     </Grid>
 </Window>

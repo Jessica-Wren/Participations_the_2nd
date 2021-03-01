@@ -25,33 +25,16 @@ namespace Practice
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void btnButton_Click(object sender, RoutedEventArgs e)
         {
-            string name = tbxName.Text;
-            string bday = tbxBDay.Text;
-
-            DateTime responseDate = Convert.ToDateTime(bday);
-
-            var today = DateTime.Today;
-            var finalResult = today.Year - responseDate.Year;
-            
-
-            MessageBox.Show(name + ", you are" + finalResult + " years old this year","HI");
-
-            lblName.Content = Brushes.AntiqueWhite;
-
-            
-
-        }
-
-        private void btnButton_MouseEnter(object sender, MouseEventArgs e)
-        {
-            grdChangeMe.Background = Brushes.Tomato;
-        }
-
-        private void btnButton_MouseLeave(object sender, MouseEventArgs e)
-        {
-            grdChangeMe.Background = Brushes.PapayaWhip;
+            EntryForm myEntryForm = new EntryForm
+            {
+                Name = tbxName.Text,
+                Address = tbxAddress.Text,
+                ZipCode = Convert.ToInt32( tbxZip.Text),
+                
+            };
+            lbxListBox.Items.Add(myEntryForm);
         }
     }
 }
