@@ -25,15 +25,16 @@ namespace Practice
 
         public void StudentInfo2(Student myWindowStudent)
         {
-             lblHey.Content = myWindowStudent.FirstName;
+             lblFirstName.Content = myWindowStudent.FirstName;
             lblLastName.Content = myWindowStudent.LastName;
-            
+
+            lblZip.Content = myWindowStudent.Address;
 
         }
 
         public void StudentInfo3(Address myWindowAddress)
         {
-            lblZip.Content = myWindowAddress.Zipcode;
+            //lblZip.Content = myWindowAddress.Zipcode;
         }
     }
 }

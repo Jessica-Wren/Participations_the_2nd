@@ -121,7 +121,7 @@ namespace Practice
         {
             
 
-            // myNewWindow.MyQuery;
+            
 
             Student selectedStudent = (Student)lbxTheListBox.SelectedItem;
             Address selectedAddress = (Address)lbxTheListBox.SelectedItem;
