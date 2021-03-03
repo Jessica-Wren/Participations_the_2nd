@@ -7,7 +7,9 @@
         mc:Ignorable="d"
         Title="Pokemon" Height="450" Width="840">
     <Grid>
-        <ListBox x:Name="lbxPokemon" Margin="0,217,420,0"/>
+        <ListBox x:Name="lbxPokemon" Margin="0,217,420,0" SelectionChanged="lbxPokemon_SelectionChanged"/>
+        <Label x:Name="lblHeightAndWeight" Content="Label" HorizontalAlignment="Left" Margin="134,77,0,0" VerticalAlignment="Top"/>
+        <Image x:Name="imgPokemon" HorizontalAlignment="Left" Height="100" Margin="626,134,0,0" VerticalAlignment="Top" Width="100"/>
 
     </Grid>
 </Window>

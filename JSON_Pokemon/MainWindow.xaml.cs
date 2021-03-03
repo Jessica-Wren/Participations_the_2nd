@@ -41,18 +41,7 @@ namespace JSON_Pokemon
             }
 
 
-            AllPokedexAPI pokedexApi;
-            string pokedexUrl = "https://pokeapi.co/api/v2/pokemon/pikachu";
-
-            using (var client = new HttpClient())
-            {
-                string json2 = client.GetStringAsync(pokedexUrl).Result;
-
-                pokedexApi = JsonConvert.DeserializeObject<AllPokedexAPI>(json2);
-
-                
-
-            }
+            
 
 
 
@@ -61,6 +50,30 @@ namespace JSON_Pokemon
             {
                 lbxPokemon.Items.Add(item);
             }
+        }
+
+        private void lbxPokemon_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            var selectedCharacter = (ResultObject)lbxPokemon.SelectedItem;
+            
+
+            using (var client = new HttpClient())
+            {
+                string json = client.GetStringAsync(selectedCharacter.url).Result;
+
+                var selectedPokedex = JsonConvert.DeserializeObject<AllPokedexAPI>(json);
+
+
+                /*string json2 = client.GetStringAsync(selectedCharacter.url).Result;
+
+                var selectedSpritesObject = JsonConvert.DeserializeObject<SpritesObject>(json2);*/
+
+                imgPokemon.Source = new BitmapImage(new Uri(selectedPokedex.sprites.front_default));
+            }
+
+            //switch statements for front and back
+            
+
         }
     }
 }

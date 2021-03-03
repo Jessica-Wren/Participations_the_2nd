@@ -124,10 +124,10 @@ namespace Practice
             
 
             Student selectedStudent = (Student)lbxTheListBox.SelectedItem;
-            Address selectedAddress = (Address)lbxTheListBox.SelectedItem;
+            //Address selectedAddress = (Address)lbxTheListBox.SelectedItem;
             MyWindow myNewWindow = new MyWindow();
             myNewWindow.StudentInfo2(selectedStudent);
-            myNewWindow.StudentInfo3(selectedAddress);
+            //myNewWindow.StudentInfo3(selectedAddress);
             myNewWindow.ShowDialog();
 
 
