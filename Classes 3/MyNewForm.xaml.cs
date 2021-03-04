@@ -17,17 +17,20 @@ namespace Classes_3
     /// </summary>
     public partial class MyNewForm : Window
     {
-        public string GetYouOver { get; set; }
+        
 
         public MyNewForm()
         {
             InitializeComponent();
         }
 
-        /*public void ShowStudent(Student selectedStudent)
+        public void ShowStudent(Student moreInfo)
         {
-            lblHi.Content = selectedStudent;
-        }*/
+            lblFirstName.Content = moreInfo.FirstName;
+            lblGPA.Content = moreInfo.GPA;
+            lblStreetName.Content = moreInfo.Address.StreetName;
+            lblZipCode.Content = moreInfo.Address.Zipcode.ToString();
+        }
 
 
     }

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Classes_3
 {
-    class Address
+    public class Address
     {
         public int StreetNumber { get; set; }
         public string StreetName { get; set; }

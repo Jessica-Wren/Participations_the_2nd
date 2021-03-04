@@ -28,14 +28,7 @@ namespace Classes_3
         private void btnSubmitInfo_Click(object sender, RoutedEventArgs e)
         {
 
-            int streetnum;
-            int.TryParse(tbxStreetNumber.Text, out streetnum);
-
-            int zipCode;
-            int.TryParse(tbxZipcode.Text, out zipCode);
-
-
-                Student myStudent = new Student
+                Student myStudent = new Student()
             {
                 FirstName = tbxFirstName.Text,
                 LastName = tbxLastName.Text,
@@ -43,7 +36,16 @@ namespace Classes_3
                 GPA = Convert.ToDouble(tbxGPA.Text),
             };
 
-            myStudent.SetAddress(streetnum, tbxStreetName.Text, tbxState.Text, tbxCity.Text, zipCode);
+            Address myAddress = new Address()
+            {
+                StreetName = tbxStreetName.Text,
+               
+                Zipcode = Convert.ToInt32(tbxZipcode.Text),
+
+            };
+
+            myStudent.Address = myAddress;
+
             lbxTheListBox.Items.Add(myStudent);
 
 
@@ -64,17 +66,11 @@ namespace Classes_3
             
             Student selectedStudent = (Student)lbxTheListBox.SelectedItem;
 
-            
-
             MyNewForm myNewFormV = new MyNewForm();
 
+            myNewFormV.ShowStudent(selectedStudent);
             myNewFormV.Show();
-
-            //myNewFormV.ShowStudent(selectedStudent);
-
-            
-
-            //myNewFormV.GetYouOver = selectedStudent;
+           
         }
 
 
