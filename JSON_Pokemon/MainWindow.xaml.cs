@@ -20,8 +20,12 @@ namespace JSON_Pokemon
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
+    /// 
+
     public partial class MainWindow : Window
     {
+        
+        int i = 0;
         public MainWindow()
         {
             InitializeComponent();
@@ -41,7 +45,7 @@ namespace JSON_Pokemon
             }
 
 
-            
+
 
 
 
@@ -55,7 +59,7 @@ namespace JSON_Pokemon
         private void lbxPokemon_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             var selectedCharacter = (ResultObject)lbxPokemon.SelectedItem;
-            
+
 
             using (var client = new HttpClient())
             {
@@ -64,16 +68,50 @@ namespace JSON_Pokemon
                 var selectedPokedex = JsonConvert.DeserializeObject<AllPokedexAPI>(json);
 
 
-                /*string json2 = client.GetStringAsync(selectedCharacter.url).Result;
-
-                var selectedSpritesObject = JsonConvert.DeserializeObject<SpritesObject>(json2);*/
-
                 imgPokemon.Source = new BitmapImage(new Uri(selectedPokedex.sprites.front_default));
+
+                lblHeight.Content = selectedPokedex.height;
+                lblWeight.Content = selectedPokedex.weight;
             }
 
             //switch statements for front and back
-            
 
+
+        }
+
+        private void btnButton_Click(object sender, RoutedEventArgs e)
+        {
+            var selectedCharacter = (ResultObject)lbxPokemon.SelectedItem;
+
+
+            using (var client = new HttpClient())
+            {
+                string json = client.GetStringAsync(selectedCharacter.url).Result;
+
+                var selectedPokedex = JsonConvert.DeserializeObject<AllPokedexAPI>(json);
+
+                if(i == 1)
+                {
+                    imgPokemon.Source = new BitmapImage(new Uri(selectedPokedex.sprites.front_default));
+                    i = 0;
+                    lblI.Content = (i);
+                }
+
+                if (i == 0)
+                {
+                    
+                    imgPokemon.Source = new BitmapImage(new Uri(selectedPokedex.sprites.back_default));
+                    i++;
+
+                    Console.WriteLine(i);
+                    lblI.Content = (i);
+                }
+
+
+
+                lblHeight.Content = selectedPokedex.height;
+                lblWeight.Content = selectedPokedex.weight;
+            }
         }
     }
 }

@@ -7,9 +7,14 @@
         mc:Ignorable="d"
         Title="Pokemon" Height="450" Width="840">
     <Grid>
-        <ListBox x:Name="lbxPokemon" Margin="0,217,420,0" SelectionChanged="lbxPokemon_SelectionChanged"/>
-        <Label x:Name="lblHeightAndWeight" Content="Label" HorizontalAlignment="Left" Margin="134,77,0,0" VerticalAlignment="Top"/>
+        <ListBox x:Name="lbxPokemon" Margin="0,107,420,0" SelectionChanged="lbxPokemon_SelectionChanged"/>
+        <Label x:Name="lblHeight" Content="Label" HorizontalAlignment="Left" Margin="709,35,0,0" VerticalAlignment="Top"/>
         <Image x:Name="imgPokemon" HorizontalAlignment="Left" Height="100" Margin="626,134,0,0" VerticalAlignment="Top" Width="100"/>
+        <Label Content="Height:" HorizontalAlignment="Left" Margin="589,35,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblWeight" Content="Label" HorizontalAlignment="Left" Margin="709,94,0,0" VerticalAlignment="Top"/>
+        <Label Content="Weight:" HorizontalAlignment="Left" Margin="589,94,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="btnButton" Content="Turn the Pokemon Around!" HorizontalAlignment="Left" Margin="599,302,0,0" VerticalAlignment="Top" Height="54" Width="161" Click="btnButton_Click"/>
+        <Label x:Name="lblI" Content="Label" HorizontalAlignment="Left" Margin="494,374,0,0" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>
