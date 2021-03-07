@@ -44,11 +44,6 @@ namespace JSON_Pokemon
 
             }
 
-
-
-
-
-
             // results is our first object (list) in the JSON 
             foreach (var item in api.results) //.OrderBy(x => x.name).ToList())   // HOW TO ORDER ALPHABELTICALLY x represents the class
             {
