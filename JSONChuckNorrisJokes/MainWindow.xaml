@@ -1,0 +1,15 @@
+﻿<Window x:Class="JSONChuckNorrisJokes.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:JSONChuckNorrisJokes"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <ComboBox x:Name="cbxChuckNorrisCBX" HorizontalAlignment="Left" Margin="64,32,0,0" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="BtnGetJoke" Content="Get Joke" HorizontalAlignment="Left" Margin="69,331,0,0" VerticalAlignment="Top" Height="54" Width="115"/>
+        <Label x:Name="lblJoke" Content="Label" HorizontalAlignment="Left" Margin="489,105,0,0" VerticalAlignment="Top"/>
+
+    </Grid>
+</Window>

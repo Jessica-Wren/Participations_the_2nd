@@ -7,34 +7,13 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Grid RenderTransformOrigin="0.504,0.496" Margin="3,0,-3,0">
-            <Grid.Background>
-                <ImageBrush/>
-            </Grid.Background>
-            <Label x:Name="lblFirstName" Content="First Name&#xA;" HorizontalAlignment="Left" Margin="25,80,0,0" VerticalAlignment="Top" FontFamily="Monotype Corsiva" FontSize="18" Height="24"/>
-            <Label x:Name="lblStreetNumber" Content="Street Number" HorizontalAlignment="Left" Margin="32,0,0,0" VerticalAlignment="Center" FontFamily="Monotype Corsiva" FontSize="18"/>
-            <Label x:Name="lblGPA" Content="GPA" HorizontalAlignment="Left" Margin="32,167,0,0" VerticalAlignment="Top" FontFamily="Monotype Corsiva" FontSize="18"/>
-            <Label x:Name="lblLastName" Content="Last Name&#xA;" HorizontalAlignment="Left" Margin="25,105,0,0" VerticalAlignment="Top" FontFamily="Monotype Corsiva" FontSize="18" RenderTransformOrigin="14.754,8.454" Height="31"/>
-            <Label x:Name="lblTitle" Content="The University of Oklahoma May 2021 Graduation Handout" HorizontalAlignment="Center" Margin="0,19,0,0" VerticalAlignment="Top" FontFamily="Monotype Corsiva" FontSize="22" Width="524" FontWeight="Bold"/>
-            <Label x:Name="lblStreetName" Content="Street Name" HorizontalAlignment="Left" Margin="35,232,0,0" VerticalAlignment="Top" FontFamily="Monotype Corsiva" FontSize="18"/>
-            <Label x:Name="lblMajor" Content="Major" HorizontalAlignment="Left" Margin="32,136,0,0" VerticalAlignment="Top" FontFamily="Monotype Corsiva" FontSize="18"/>
-            <Label x:Name="lblState" Content="State" HorizontalAlignment="Left" Margin="32,267,0,0" VerticalAlignment="Top" FontFamily="Monotype Corsiva" FontSize="18"/>
-            <Label x:Name="lblCity" Content="City" HorizontalAlignment="Left" Margin="35,297,0,0" VerticalAlignment="Top" FontFamily="Monotype Corsiva" FontSize="18"/>
-            <Label x:Name="lblZip" Content="Zipcode" HorizontalAlignment="Left" Margin="32,327,0,0" VerticalAlignment="Top" FontFamily="Monotype Corsiva" FontSize="18"/>
-            <Button x:Name="btnSubmitInfo" Content="Submit" HorizontalAlignment="Left" Margin="147,364,0,0" VerticalAlignment="Top" Height="52" Width="162" Click="btnSubmitInfo_Click"/>
-            <TextBox x:Name="tbxFirstName" HorizontalAlignment="Left" Margin="168,83,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-            <TextBox x:Name="tbxLastName" HorizontalAlignment="Left" Margin="168,112,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-            <TextBox x:Name="tbxMajor" HorizontalAlignment="Left" Margin="168,141,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-            <TextBox x:Name="tbxGPA" HorizontalAlignment="Left" Margin="168,173,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-            <TextBox x:Name="tbxStreetNumber" HorizontalAlignment="Left" Margin="168,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="120"/>
-            <TextBox x:Name="tbxStreetName" HorizontalAlignment="Left" Margin="168,236,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-            <TextBox x:Name="tbxState" HorizontalAlignment="Left" Margin="168,269,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-            <TextBox x:Name="tbxCity" HorizontalAlignment="Left" Margin="168,302,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.493,0.536"/>
-            <TextBox x:Name="tbxZipcode" HorizontalAlignment="Left" Margin="168,333,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-            <ListBox x:Name="lbxTheListBox" Margin="388,83,44,83" SelectionChanged="lbxTheListBox_SelectionChanged"/>
-
-
-        </Grid>
+        <ListBox x:Name="lbxLbx" Margin="0,0,506,0" SelectionChanged="lbxLbx_SelectionChanged"/>
+        <Image x:Name="imgImg" HorizontalAlignment="Left" Height="100" Margin="551,186,0,0" VerticalAlignment="Top" Width="100"/>
+        <Label Content="Height:" HorizontalAlignment="Left" Margin="387,72,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblHeight" Content="Label" HorizontalAlignment="Left" Margin="475,72,0,0" VerticalAlignment="Top"/>
+        <Label Content="Weight:" HorizontalAlignment="Left" Margin="602,72,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblWeight" Content="Label" HorizontalAlignment="Left" Margin="693,72,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="btnBtn" Content="Button" HorizontalAlignment="Left" Margin="551,358,0,0" VerticalAlignment="Top" Height="35" Width="101" Click="btnBtn_Click"/>
 
     </Grid>
 </Window>

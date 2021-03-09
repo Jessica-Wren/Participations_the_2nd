@@ -1,6 +1,8 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -23,114 +25,61 @@ namespace Practice
         public MainWindow()
         {
             InitializeComponent();
+
+            // --------------------------------------------------------------- simply getting the JSON to connect ----------------------------
+            AllPokemonAPI api;
+            string url = "https://pokeapi.co/api/v2/pokemon?limit=1200";
+
+            using (var client = new HttpClient())
+            {
+                string json = client.GetStringAsync(url).Result;
+
+                api = JsonConvert.DeserializeObject<AllPokemonAPI>(json);
+
+                // ---------------------------------------------------------------------------------------------------------------------------
+
+            }
+
+            // results is our first object (list) in the JSON 
+            foreach (var item in api.results) //.OrderBy(x => x.name).ToList())   // HOW TO ORDER ALPHABELTICALLY x represents the class
+            {
+                lbxLbx.Items.Add(item);
+            }
         }
 
-        private void btnSubmitInfo_Click(object sender, RoutedEventArgs e)
+        private void lbxLbx_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            bool checkForBlank = true;
+            var selectedCharacter = (ResultsObject)lbxLbx.SelectedItem;
 
-            if (string.IsNullOrWhiteSpace(tbxFirstName.Text) == true)
+            using (var client = new HttpClient())
             {
-                checkForBlank = false;
-                MessageBox.Show("You must enter a vaild field (letters) for the First Name box.", "Warning", MessageBoxButton.OK, MessageBoxImage.Exclamation);
+                string json = client.GetStringAsync(selectedCharacter.url).Result;
+
+                var selectedPokedex = JsonConvert.DeserializeObject<AllPokedexAPI>(json);
+
+                imgImg.Source = new BitmapImage(new Uri(selectedPokedex.sprites.back_default));
+
+                lblHeight.Content = selectedPokedex.height;
+                lblWeight.Content = selectedPokedex.weight;
+
             }
-
-            if (string.IsNullOrWhiteSpace(tbxLastName.Text) == true)
-            {
-                checkForBlank = false;
-                MessageBox.Show("You must enter a valid field (letters) for the Last Name box.", "Warning", MessageBoxButton.OK, MessageBoxImage.Exclamation);
-            }
-
-            if (string.IsNullOrWhiteSpace(tbxMajor.Text) == true)
-            {
-                checkForBlank = false;
-                MessageBox.Show("You must enter a valid field (letters) for the Major box.", "Warning", MessageBoxButton.OK, MessageBoxImage.Exclamation);
-            }
-
-
-            double gpa;
-            if (double.TryParse(tbxGPA.Text, out gpa) == false)
-            {
-                checkForBlank = false;
-                MessageBox.Show("You must enter a valid field (numbers with or without decimals) for the GPA box.", "Warning", MessageBoxButton.OK, MessageBoxImage.Exclamation);
-            }
-
-
-            int streetnum;
-            if (int.TryParse(tbxStreetNumber.Text, out streetnum) == false)
-            {
-                checkForBlank = false;
-                MessageBox.Show("You must enter a valid field (integers) for the Street Number box.", "Warning", MessageBoxButton.OK, MessageBoxImage.Exclamation);
-            }
-
-            if (string.IsNullOrWhiteSpace(tbxStreetName.Text) == true)
-            {
-                checkForBlank = false;
-                MessageBox.Show("You must enter a valid field (letters) for the Street Name box.", "Warning", MessageBoxButton.OK, MessageBoxImage.Exclamation);
-            }
-
-            if (string.IsNullOrWhiteSpace(tbxState.Text) == true)
-            {
-                checkForBlank = false;
-                MessageBox.Show("You must enter a valid field (letters) for the State box.", "Warning", MessageBoxButton.OK, MessageBoxImage.Exclamation);
-            }
-
-            if (string.IsNullOrWhiteSpace(tbxCity.Text) == true)
-            {
-                checkForBlank = false;
-                MessageBox.Show("You must enter a valid field (letters) for the City box.", "Warning", MessageBoxButton.OK, MessageBoxImage.Exclamation);
-            }
-
-            int zipCode;
-            if (int.TryParse(tbxZipcode.Text, out zipCode) == false)
-            {
-                checkForBlank = false;
-                MessageBox.Show("You must enter a valid field (integers) for the Zipcode box.", "Warning", MessageBoxButton.OK, MessageBoxImage.Exclamation);
-            }
-
-            if (checkForBlank == false)
-            {
-                return;
-            }
-
-            Student myStudent = new Student
-            {
-                FirstName = tbxFirstName.Text,
-                LastName = tbxLastName.Text,
-                Major = tbxMajor.Text,
-                GPA = Convert.ToDouble(tbxGPA.Text),
-
-            };
-
-            myStudent.SetAddress(streetnum, tbxStreetName.Text, tbxState.Text, tbxCity.Text, zipCode);
-            lbxTheListBox.Items.Add(myStudent);
-
-            tbxCity.Clear();
-            tbxFirstName.Clear();
-            tbxGPA.Clear();
-            tbxLastName.Clear();
-            tbxMajor.Clear();
-            tbxState.Clear();
-            tbxStreetName.Clear();
-            tbxStreetNumber.Clear();
-            tbxZipcode.Clear();
-
         }
 
-        private void lbxTheListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void btnBtn_Click(object sender, RoutedEventArgs e)
         {
-            
+            var selectedCharacter = (ResultsObject)lbxLbx.SelectedItem;
 
-            
+            using (var client = new HttpClient())
+            {
+                string json = client.GetStringAsync(selectedCharacter.url).Result;
 
-            Student selectedStudent = (Student)lbxTheListBox.SelectedItem;
-            //Address selectedAddress = (Address)lbxTheListBox.SelectedItem;
-            MyWindow myNewWindow = new MyWindow();
-            myNewWindow.StudentInfo2(selectedStudent);
-            //myNewWindow.StudentInfo3(selectedAddress);
-            myNewWindow.ShowDialog();
+                var selectedPokedex = JsonConvert.DeserializeObject<AllPokedexAPI>(json);
 
+                imgImg.Source = new BitmapImage(new Uri(selectedPokedex.sprites.back_shiny));
 
+                
+
+            }
         }
     }
 }
