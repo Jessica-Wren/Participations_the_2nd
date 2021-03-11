@@ -1,6 +1,8 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -24,8 +26,30 @@ namespace JSONChuckNorrisJokes
         {
             InitializeComponent();
 
+            cbxJokeCategory.Items.Add("All");
 
-            //Would it be if they selected a category then give them this api?
+            
+        }
+
+        private void IfSelectedAll()
+        {
+            AllJokesAPI api;
+            string url = "https://api.chucknorris.io/jokes/random";
+
+            using (var client = new HttpClient())
+            {
+                string json = client.GetStringAsync(url).Result;
+
+                api = JsonConvert.DeserializeObject<AllJokesAPI>(json);
+
+                lblTheJoke.Content = api;
+
+            }
+        }
+
+        private void btnGetJoke_Click(object sender, RoutedEventArgs e)
+        {
+            IfSelectedAll();
         }
     }
 }

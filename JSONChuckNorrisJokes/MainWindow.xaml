@@ -7,9 +7,9 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <ComboBox x:Name="cbxChuckNorrisCBX" HorizontalAlignment="Left" Margin="64,32,0,0" VerticalAlignment="Top" Width="120"/>
-        <Button x:Name="BtnGetJoke" Content="Get Joke" HorizontalAlignment="Left" Margin="69,331,0,0" VerticalAlignment="Top" Height="54" Width="115"/>
-        <Label x:Name="lblJoke" Content="Label" HorizontalAlignment="Left" Margin="489,105,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="cbxJokeCategory" HorizontalAlignment="Left" Margin="83,56,0,0" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="btnGetJoke" Content="Get Joke" HorizontalAlignment="Left" Margin="83,297,0,0" VerticalAlignment="Top" Height="58" Width="132" Click="btnGetJoke_Click"/>
+        <Label x:Name="lblTheJoke" Content="Label" HorizontalAlignment="Left" Margin="571,122,0,0" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>
