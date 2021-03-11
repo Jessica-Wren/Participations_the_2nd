@@ -9,7 +9,7 @@
     <Grid>
         <ComboBox x:Name="cbxJokeCategory" HorizontalAlignment="Left" Margin="83,56,0,0" VerticalAlignment="Top" Width="120"/>
         <Button x:Name="btnGetJoke" Content="Get Joke" HorizontalAlignment="Left" Margin="83,297,0,0" VerticalAlignment="Top" Height="58" Width="132" Click="btnGetJoke_Click"/>
-        <Label x:Name="lblTheJoke" Content="Label" HorizontalAlignment="Left" Margin="571,122,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblTheJoke" Content="Label" HorizontalAlignment="Left" Margin="83,157,0,0" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>
