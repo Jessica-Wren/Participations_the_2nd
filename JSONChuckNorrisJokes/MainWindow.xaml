@@ -5,11 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:JSONChuckNorrisJokes"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Chuck Norris Jokes" Height="450" Width="800">
     <Grid>
-        <ComboBox x:Name="cbxJokeCategory" HorizontalAlignment="Left" Margin="83,56,0,0" VerticalAlignment="Top" Width="120"/>
-        <Button x:Name="btnGetJoke" Content="Get Joke" HorizontalAlignment="Left" Margin="83,297,0,0" VerticalAlignment="Top" Height="58" Width="132" Click="btnGetJoke_Click"/>
-        <Label x:Name="lblTheJoke" Content="Label" HorizontalAlignment="Left" Margin="83,157,0,0" VerticalAlignment="Top"/>
+        <Grid.Background>
+            <ImageBrush ImageSource="https://assetsds.cdnedge.bluemix.net/sites/default/files/styles/big_1/public/news/images/chuck.jpg?itok=d--2HLVI"/>
+        </Grid.Background>
+        <ComboBox x:Name="cbxJokeCategory" HorizontalAlignment="Left" Margin="42,52,0,0" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="btnGetJoke" Content="Get Joke" HorizontalAlignment="Left" Margin="42,315,0,0" VerticalAlignment="Top" Height="58" Width="132" Click="btnGetJoke_Click"/>
+        <Label x:Name="lblTheJoke" Content="Label" HorizontalAlignment="Left" Margin="42,179,0,0" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>

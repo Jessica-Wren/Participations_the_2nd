@@ -114,4 +114,63 @@ namespace JSONChuckNorrisJokes
         }
     }
 
+    public class AllMusicAPI
+    {
+        public string value { get; set; }
+
+        public override string ToString()
+        {
+            return value;
+        }
+    }
+
+    public class AllPoliticalAPI
+    {
+        public string value { get; set; }
+
+        public override string ToString()
+        {
+            return value;
+        }
+    }
+
+    public class AllReligionAPI
+    {
+        public string value { get; set; }
+
+        public override string ToString()
+        {
+            return value;
+        }
+    }
+
+    public class AllScienceAPI
+    {
+        public string value { get; set; }
+
+        public override string ToString()
+        {
+            return value;
+        }
+    }
+
+    public class AllSportAPI
+    {
+        public string value { get; set; }
+
+        public override string ToString()
+        {
+            return value;
+        }
+    }
+
+    public class AllTravelAPI
+    {
+        public string value { get; set; }
+
+        public override string ToString()
+        {
+            return value;
+        }
+    }
 }

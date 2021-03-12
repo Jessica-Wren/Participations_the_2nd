@@ -108,14 +108,127 @@ namespace JSONChuckNorrisJokes
             {
                 IfSelectedMovie();
             }
+            else if (cbxJokeCategory.SelectedItem == "music")
+            {
+                IfSelectedMusic();
+            }
+            else if (cbxJokeCategory.SelectedItem == "political")
+            {
+                IfSelectedPolitical();
+            }
+            else if (cbxJokeCategory.SelectedItem == "religion")
+            {
+                IfSelectedReligion();
+            }
+            else if (cbxJokeCategory.SelectedItem == "science")
+            {
+                IfSelectedScience();
+            }
+            else if (cbxJokeCategory.SelectedItem == "science")
+            {
+                IfSelectedScience();
+            }
+            else if (cbxJokeCategory.SelectedItem == "sport")
+            {
+                IfSelectedSport();
+            }
+            else if (cbxJokeCategory.SelectedItem == "travel")
+            {
+                IfSelectedTravel();
+            }
 
 
+        }
+
+        private void IfSelectedTravel()
+        {
+            AllTravelAPI api;
+            string url = "https://api.chucknorris.io/jokes/random?category=travel";
+
+            using (var client = new HttpClient())
+            {
+                string json = client.GetStringAsync(url).Result;
+                api = JsonConvert.DeserializeObject<AllTravelAPI>(json);
+
+                lblTheJoke.Content = api;
+            }
+        }
+
+        private void IfSelectedSport()
+        {
+            AllSportAPI api;
+            string url = "https://api.chucknorris.io/jokes/random?category=sport";
+
+            using (var client = new HttpClient())
+            {
+                string json = client.GetStringAsync(url).Result;
+                api = JsonConvert.DeserializeObject<AllSportAPI>(json);
+
+                lblTheJoke.Content = api;
+            }
+        }
+
+        private void IfSelectedScience()
+        {
+            AllScienceAPI api;
+            string url = "https://api.chucknorris.io/jokes/random?category=science";
+
+            using (var client = new HttpClient())
+            {
+                string json = client.GetStringAsync(url).Result;
+                api = JsonConvert.DeserializeObject<AllScienceAPI>(json);
+
+                lblTheJoke.Content = api;
+            }
+        }
+
+        private void IfSelectedReligion()
+        {
+            AllReligionAPI api;
+            string url = "https://api.chucknorris.io/jokes/random?category=religion";
+
+            using (var client = new HttpClient())
+            {
+                string json = client.GetStringAsync(url).Result;
+                api = JsonConvert.DeserializeObject<AllReligionAPI>(json);
+
+                lblTheJoke.Content = api;
+            }
+        }
+
+        private void IfSelectedPolitical()
+        {
+            AllPoliticalAPI api;
+            string url = "https://api.chucknorris.io/jokes/random?category=political";
+
+            using (var client = new HttpClient())
+            {
+                string json = client.GetStringAsync(url).Result;
+                api = JsonConvert.DeserializeObject<AllPoliticalAPI>(json);
+
+                lblTheJoke.Content = api;
+            }
+        }
+
+        private void IfSelectedMusic()
+        {
+            AllMusicAPI api;
+            string url = "https://api.chucknorris.io/jokes/random?category=music";
+
+            using (var client = new HttpClient())
+            {
+                string json = client.GetStringAsync(url).Result;
+                api = JsonConvert.DeserializeObject<AllMusicAPI>(json);
+
+                lblTheJoke.Content = api;
+
+            }
         }
 
         private void IfSelectedMovie()
         {
             AllMovieAPI api;
-            string url = "https://api.chucknorris.io/jokes/random?category=money";
+            string url = "https://api.chucknorris.io/jokes/random?category=movie";
 
             using (var client = new HttpClient())
             {
