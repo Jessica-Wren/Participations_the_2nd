@@ -10,28 +10,21 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace Classes_3
+namespace PracticeDelete
 {
     /// <summary>
-    /// Interaction logic for MyNewForm.xaml
+    /// Interaction logic for MyWindow.xaml
     /// </summary>
-    public partial class MyNewForm : Window
+    public partial class MyWindow : Window
     {
-        
-
-        public MyNewForm()
+        public MyWindow()
         {
             InitializeComponent();
         }
 
-
-        public void ShowStudent(Student moreInfo)
+        public void MyShowImage(ResultsObject characterPicture)
         {
-            lblFirstName.Content = moreInfo.FirstName;
-            lblGPA.Content = moreInfo.GPA;
-            lblStreetName.Content = moreInfo.Address.StreetName;
-            lblZipCode.Content = moreInfo.Address.Zipcode.ToString();
+            imgImg.Source = new BitmapImage(new Uri(characterPicture.image));
         }
-
     }
 }
